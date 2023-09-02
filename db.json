@@ -125,8 +125,34 @@
         "Cebola roxa",
         "Tomate"
       ],
-      "status": "Em produção",
+      "status": "Solicitado",
       "id": 1
+    },
+    {
+      "nome": "Teste 14",
+      "tamanho": "Extra Grande (GG)",
+      "carne": "Veggie burger",
+      "pao": "3 Queijos",
+      "preco": "39.00",
+      "opcionais": [
+        "Pepino",
+        "Tomate",
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": "Abc",
+      "tamanho": "Médio (M)",
+      "carne": "Veggie burger",
+      "pao": "Italiano Branco",
+      "preco": 31,
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Finalizado",
+      "id": 4
     }
   ]
 }
