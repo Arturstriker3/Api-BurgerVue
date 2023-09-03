@@ -70,7 +70,7 @@ app.post('/api/burgers', (req, res) => {
   res.json(novoBurger);
 });
 
-// Log a cada 10 segundos
+// Log a cada 1 minuto
 setInterval(() => {
     console.log('API Funcionando');
   }, 60 * 1000);
