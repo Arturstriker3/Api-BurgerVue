@@ -73,7 +73,7 @@ app.post('/api/burgers', (req, res) => {
 // Log a cada 10 segundos
 setInterval(() => {
     console.log('API Funcionando');
-  }, 10000);
+  }, 60 * 1000);
 
 app.listen(port, () => {
   console.log(`API está executando na porta ${port}`);
