@@ -70,10 +70,15 @@ app.post('/api/burgers', (req, res) => {
   res.json(novoBurger);
 });
 
-// Log a cada 1 minuto
+// Rota de teste para verificar se a API está funcionando
+app.get('/api/funcionando', (req, res) => {
+  res.json({ message: 'Funcionando' });
+});
+
+// Log a cada 5 minuto
 setInterval(() => {
     console.log('API Funcionando');
-  }, 60 * 1000);
+  }, 300 * 1000);
 
 app.listen(port, () => {
   console.log(`API está executando na porta ${port}`);
