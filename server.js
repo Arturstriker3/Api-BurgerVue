@@ -75,10 +75,23 @@ app.get('/api/funcionando', (req, res) => {
   res.json({ message: 'Funcionando' });
 });
 
-// Log a cada 5 minuto
-setInterval(() => {
-    console.log('API Funcionando');
-  }, 300 * 1000);
+// Fix
+function imprimirMensagem() {
+  const agora = new Date();
+  const horaAtual = agora.getHours();
+  
+  // Verificar se é 12 horas (12 PM)
+  if (horaAtual === 12) {
+    const diasAtivados = Math.floor((agora - dataInicial) / (1000 * 60 * 60 * 24));
+    console.log(`${horaAtual} - API Funcionando, durante ${diasAtivados} dias`);
+  }
+}
+
+const dataInicial = new Date(); // Registra a data e hora de início
+
+// Intervalo para chamar a função imprimirMensagem a cada minuto
+setInterval(imprimirMensagem, 60000); // A cada minuto (60 * 1000 milissegundos)
+// Fix
 
 app.listen(port, () => {
   console.log(`API está executando na porta ${port}`);
